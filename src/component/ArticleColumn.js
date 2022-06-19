@@ -11,8 +11,6 @@ import ImageSlider from "./elements/ImageSlider";
 
 const ArticleColumn = observer(({article, articleItems}) => {
 
-    const grid = 8;
-
     const renderItem = (item) => {
         console.log("render")
         if (item.type === ArticleItemType.Header) {
@@ -32,8 +30,8 @@ const ArticleColumn = observer(({article, articleItems}) => {
 
     const getListStyle = () => ({
         background: "white",
-        padding: grid,
-        width: "80%",
+        padding: 8,
+        width: "90%",
         marginBottom: 200
     });
 
