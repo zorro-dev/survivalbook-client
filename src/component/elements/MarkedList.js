@@ -4,7 +4,7 @@ const MarkedList = ({element}) => {
 
     return (
         <div className="d-flex flex-row">
-            <ul style={{border: "none", outline: "none", width: "70%", fontFamily:"serif", fontSize:20}}>
+            <ul className="list">
                 {element.value.map(item => <li id={item.number} key={item.number}>{item.value}</li>)}
             </ul>
         </div>

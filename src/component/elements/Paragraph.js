@@ -4,7 +4,7 @@ const Paragraph = ({element}) => {
 
     return (
         <div className="d-flex flex-row">
-            <p style={{border: "none", outline: "none", width: "70%", fontFamily:"serif", fontSize:20}}>{element.value}</p>
+            <p className="paragraph">{element.value}</p>
         </div>
     );
 };

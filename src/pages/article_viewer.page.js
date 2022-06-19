@@ -4,6 +4,7 @@ import { Container, Spinner} from "react-bootstrap";
 import {useParams} from "react-router-dom";
 import {fetchArticle} from "../http/articleApi";
 import ArticleColumn from "../component/ArticleColumn";
+import {ArticleItemType} from "../constants";
 
 const ArticleViewer = observer(() => {
 

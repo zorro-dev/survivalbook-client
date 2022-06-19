@@ -8,13 +8,14 @@ import ImageItem from "./elements/ImageItem";
 import MarkedList from "./elements/MarkedList";
 import NumberList from "./elements/NumberList";
 import ImageSlider from "./elements/ImageSlider";
+import '../css/ArticleElement.css'
 
 const ArticleColumn = observer(({article, articleItems}) => {
 
-    const renderItem = (item) => {
+    const renderItem = (item, index) => {
         console.log("render")
         if (item.type === ArticleItemType.Header) {
-            return <Header element={item}/>
+            return <Header element={item} index={index}/>
         } else if (item.type === ArticleItemType.Paragraph) {
             return <Paragraph element={item}/>
         } else if (item.type === ArticleItemType.Image) {
@@ -27,13 +28,6 @@ const ArticleColumn = observer(({article, articleItems}) => {
             return <ImageSlider element={item}/>
         }
     }
-
-    const getListStyle = () => ({
-        background: "white",
-        padding: 8,
-        width: "90%",
-        marginBottom: 200
-    });
 
     const renderArticleItems = () => {
         return articleItems.length !== 0 ? articleItems.map((item, index) => (
@@ -51,8 +45,7 @@ const ArticleColumn = observer(({article, articleItems}) => {
         <Card className="d-flex justify-content-center align-items-center w-100"
               style={{border: "none", outline: "none", display: "inline"}}>
 
-            <div className="article_items" id="article_items"
-                 style={getListStyle()}>
+            <div className="article_items" id="article_items">
                 {renderArticleItems()}
             </div>
         </Card>

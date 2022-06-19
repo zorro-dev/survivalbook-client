@@ -1,10 +1,45 @@
 /* Hide scrollbar for Chrome, Safari and Opera */
-.scroll-content::-webkit-scrollbar {
-    display: none;
+.scroll-bar {
+    width: 10px;
+    height: 100%;
+    right: 0;
+    top: 0px;
+    position: absolute;
+    border-radius: 7px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.scroll-content {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+.scrollhost-container {
+    position: relative;
+    height: 100%;
+}
+
+/* Scroll */
+
+::-webkit-scrollbar-button {
+    background-repeat: no-repeat;
+    width: 3px;
+    height: 0px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #212529;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+::-webkit-resizer {
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Header = ({element}) => {
+const Header = ({element, index}) => {
 
     return (
         <div className="d-flex flex-row">
-            <h1 style={{border: "none", outline: "none", width: "70%"}}>{element.value}</h1>
+            {index === 0 ? <h1 className="title-h1">{element.value}</h1> :
+                <h2 className="title-h2">{element.value}</h2>}
         </div>
     );
 };

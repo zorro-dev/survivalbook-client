@@ -5,7 +5,6 @@ import '../../css/ImageSlider.css'
 const ImageSlider = ({element}) => {
 
     const getListStyle = () => ({
-        width: "70%",
         overflowX: "scroll"
     });
 
@@ -14,17 +13,17 @@ const ImageSlider = ({element}) => {
     });
 
     const renderImageItem = (item) => {
-        return <div className="d-flex" key={item.number} style={{height: 200}}>
-            <Image className="ms-sm-2 me-sm-2 rounded-3"
+        return <div className="d-flex" key={item.number} style={{height: 250}}>
+            <Image className="image-slider-item"
                    src={item.value}/>
         </div>
     }
 
     return (
-        <div className="d-flex flex-row">
+        <div className="image-slider d-flex flex-row" style={getListStyle()}>
             <div
-                style={getListStyle()}
-                className="scroll-content d-flex flex-row">
+                style={{marginBottom: 5}}
+                className="d-flex flex-row ">
                 {element.value.map((item) => (
                     <div
                         style={getImageItemStyle()}>
